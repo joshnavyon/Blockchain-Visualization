@@ -1,0 +1,59 @@
+.chevronDownIcon,
+.name {
+  position: relative;
+}
+.chevronDownIcon {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.nameParent,
+.statecollapsedInner {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.statecollapsedInner {
+  background-color: var(--color-lavender);
+  flex-direction: column;
+  padding: var(--padding-xs);
+  justify-content: flex-start;
+}
+.name1 {
+  position: relative;
+  font-weight: 500;
+}
+.nameGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-xl);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.frameParent,
+.statecollapsed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  align-self: stretch;
+  background-color: var(--color-lavender);
+  padding: var(--padding-xs) 0;
+  gap: var(--gap-8xs);
+}
+.statecollapsed {
+  position: relative;
+  width: 482px;
+  height: 34px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 13.33px;
+  color: var(--sx-dark);
+  font-family: var(--text-xs-semibold);
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-open-sans: "Open Sans";
+  --text-xs-semibold: Inter;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --text-md-semibold-size: 16px;
+  --font-size-13xl: 32px;
+  --font-size-28xl-7: 47.7px;
+  --font-size-lgi-2: 19.2px;
+  --text-xs-semibold-size: 12px;
+  --font-size-sm-3: 13.3px;
+
+  /* Colors */
+  --base-white: #fff;
+  --outline: #e0e6ed;
+  --sx-dark: #475467;
+  --color-darkslategray-100: #3b3f5c;
+  --sxx-light: #eceff4;
+  --color-black: #000;
+  --gray-900: #101828;
+  --color-mediumslateblue-100: #6b6dea;
+  --primary-600: #7f56d9;
+  --color-lavender: #e8e7f1;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-5xl: 24px;
+  --gap-5xs: 8px;
+  --gap-6xl: 25px;
+  --gap-xl: 20px;
+  --gap-21xl: 40px;
+  --gap-13xl: 32px;
+  --gap-8xs: 5px;
+
+  /* Paddings */
+  --padding-xs: 10px;
+  --padding-xl: 20px;
+  --padding-2xl: 30px;
+  --padding-5xl: 80px; 
+    
+  /* border radiuses */
+  --br-s: 10px;
+  --br-xs: 8px;
+
+  /* Effects */
+  --basic-shadow: 0px 7px 14px #d3dae2;
+}
+
+#root {
+  height: 100%;
+} 

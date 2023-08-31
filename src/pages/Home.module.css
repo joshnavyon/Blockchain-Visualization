@@ -1,0 +1,187 @@
+.loremIpsumDolor,
+.title {
+  margin: 0;
+  position: relative;
+}
+.title {
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  background: linear-gradient(#000, #000), #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.loremIpsumDolor {
+  align-self: stretch;
+  font-size: var(--font-size-lgi-2);
+  text-align: center;
+}
+.titleParent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 var(--padding-xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+  max-width: 900px;
+}
+.image1Icon {
+  max-width: 100%;
+  object-fit: cover;
+}
+.vectorIcon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+.frameChild,
+.vectorWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frameChild {
+  border: 0;
+  font-family: var(--text-xs-semibold);
+  font-size: var(--font-size-xl);
+  background-color: transparent;
+  align-self: stretch;
+  flex: 1;
+}
+.frameParent,
+.image1Parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  align-self: stretch;
+  border-radius: 0 0 var(--br-s) var(--br-s);
+  background-color: var(--sxx-light);
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-xl);
+  gap: var(--gap-6xl);
+}
+.image1Parent {
+  width: 100%;
+  flex-direction: column;
+  max-width: 900px;
+}
+.mid,
+.ourTeamWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mid {
+  align-self: stretch;
+  padding: 135px 0;
+}
+.ourTeamWrapper {
+  width: 100%;
+  padding: 0 0 var(--padding-xs);
+  box-sizing: border-box;
+  justify-content: center;
+  max-width: 900px;
+}
+.whatsappImage20230826At1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.darrellDevlin,
+.tukangCabul {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.14px;
+  line-height: 160%;
+}
+.tukangCabul {
+  font-size: var(--text-md-semibold-size);
+  opacity: 0.5;
+}
+.darrellDevlinParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.degreeComputerScience {
+  margin: 0;
+}
+.studentId103850680Container {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-xl);
+  letter-spacing: 0.14px;
+  line-height: 160%;
+  opacity: 0.8;
+}
+.cardwhitewithPhoto,
+.frameGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.frameGroup {
+  align-self: stretch;
+  padding: 0 var(--padding-2xl) var(--padding-2xl);
+}
+.cardwhitewithPhoto {
+  flex: 1;
+  border-radius: var(--br-s);
+  background-color: var(--base-white);
+  box-shadow: var(--basic-shadow);
+  border: 2px solid var(--outline);
+  box-sizing: border-box;
+  height: 522px;
+  overflow: hidden;
+}
+.cardwhitewithPhotoParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-5xl);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xl);
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-open-sans);
+}
+.footer,
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer {
+  align-self: stretch;
+  height: 709px;
+  align-items: center;
+  gap: var(--gap-3xs);
+  color: var(--color-darkslategray-100);
+}
+.home {
+  position: relative;
+  background-color: var(--base-white);
+  width: 100%;
+  overflow: hidden;
+  padding: 0 var(--padding-5xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
+  font-size: var(--font-size-28xl-7);
+  color: var(--color-black);
+  font-family: var(--text-xs-semibold);
+}

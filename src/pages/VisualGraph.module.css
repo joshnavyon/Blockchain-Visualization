@@ -1,0 +1,228 @@
+html, body {
+  height: 100vh;
+}
+
+.ax00100678be3 {
+  margin: 0;
+  position: relative;
+  line-height: 24px;
+  font-weight: 700;
+  display: inline-block;
+  width: 194px;
+  flex-shrink: 0;
+}
+.minimize01Icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.ax00100678be3Parent,
+.minimize01Wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.minimize01Wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 6px;
+  background-color: var(--color-mediumslateblue-100);
+  border-radius: 50px;
+  width: 29px;
+  height: 29px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ax00100678be3Parent {
+  align-self: stretch;
+  border-bottom: 2px solid var(--sx-dark);
+  padding: 0 0 var(--padding-xs) var(--padding-xs);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+}
+.userNamesWallet {
+  position: relative;
+  font-weight: 500;
+}
+.frameDiv,
+.nameParent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.nameParent {
+  flex-direction: row;
+  padding: 0 var(--padding-xl);
+  justify-content: space-between;
+}
+.frameDiv {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+  font-size: 13.33px;
+}
+.userNamesWalletParent {
+  gap: 21px;
+}
+.frameContainer,
+.userNamesWalletGroup,
+.userNamesWalletParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.userNamesWalletGroup {
+  gap: var(--gap-3xs);
+}
+.frameContainer {
+  gap: 23px;
+  font-size: var(--text-md-semibold-size);
+}
+.placeholderIcon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.text {
+  position: relative;
+  font-size: var(--text-md-semibold-size);
+  line-height: 24px;
+  font-weight: 600;
+  font-family: var(--text-xs-semibold);
+  color: var(--base-white);
+  text-align: left;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-xs) var(--padding-xl);
+  background-color: var(--color-mediumslateblue-100);
+  border-radius: var(--br-xs);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.buttonWrapper,
+.frameGroup {
+  display: flex;
+  flex-direction: column;
+}
+.buttonWrapper {
+  align-self: stretch;
+  flex: 1;
+  padding: var(--padding-xs);
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.frameGroup {
+  border-radius: var(--br-s);
+  background-color: #fafafa;
+  width: 512px;
+  height: auto;
+  min-height: 900px;
+  padding: 15px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.frameIcon {
+  position: relative;
+  width: 106px;
+  height: 335px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.mainNode {
+  position: absolute;
+  margin: 0 !important;
+  top: 93px;
+  left: 14.5px;
+  border-radius: 50%;
+  background-color: var(--color-mediumslateblue-100);
+  width: 93px;
+  height: 93px;
+  z-index: 0;
+}
+
+.text1 {
+  position: relative;
+  line-height: 18px;
+  font-weight: 600;
+}
+.content,
+.frame1 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.frame1 {
+  align-items: center;
+  width: 123px;
+  overflow: hidden;
+  justify-content: flex-end;
+  position: relative;
+}
+.frame,
+.frameIcon1 {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frame {
+  width: 123px;
+  height: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.frameIcon1 {
+  position: relative;
+  width: 86px;
+  height: 397px;
+}
+.frameParent1 {
+  width: 100%;
+  height: 100%;
+}
+.frameParent,
+.visualGraph {
+  background-color: var(--base-white);
+  display: flex;
+  justify-content: flex-start;
+}
+.frameParent {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 44px 0;
+  align-items: center;
+  gap: 74px;
+  height: 100%;
+}
+.visualGraph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 var(--padding-5xl);
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 23.04px;
+  color: var(--sx-dark);
+  font-family: var(--text-xs-semibold);
+}

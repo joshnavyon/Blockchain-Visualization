@@ -1,0 +1,132 @@
+.contentIcon {
+  position: relative;
+  border-radius: var(--br-5xs);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logomark {
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.logotypeIcon {
+  position: relative;
+  width: 100px;
+  height: 32px;
+  display: none;
+}
+.logo,
+.logoWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logoWrap {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  gap: var(--gap-3xs);
+  color: inherit;
+}
+.placeholderIcon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.text {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+}
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xs);
+  color: inherit;
+}
+.navigation {
+  gap: var(--gap-13xl);
+  font-size: var(--text-md-semibold-size);
+  color: var(--sx-dark);
+}
+.content,
+.frameChild,
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content {
+  gap: var(--gap-21xl);
+}
+.frameChild {
+  border: 0;
+  font-family: var(--text-xs-semibold);
+  font-size: var(--text-md-semibold-size);
+  background-color: transparent;
+  flex: 1;
+}
+.vectorIcon {
+  position: relative;
+  width: 21px;
+  height: 21px;
+}
+.container,
+.frameParent,
+.vectorWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.vectorWrapper {
+  justify-content: flex-start;
+}
+.container,
+.frameParent {
+  align-self: stretch;
+}
+.frameParent {
+  border-radius: var(--br-xs);
+  background-color: var(--sxx-light);
+  width: 316px;
+  padding: var(--padding-xs) var(--padding-xl);
+  box-sizing: border-box;
+  justify-content: center;
+  gap: var(--gap-6xl);
+}
+.container {
+  padding: 0 var(--padding-2xl);
+  justify-content: space-between;
+}
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xl) 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--text-xs-semibold);
+}
