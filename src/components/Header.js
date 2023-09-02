@@ -16,7 +16,7 @@ const Header = () => {
               </div>
               <img className={styles.logotypeIcon} alt="" src="/logotype.svg" />
             </div>
-            <div className={styles.text}>Group 13-8</div>
+            <div className={styles.text}>Group 3-16</div>
           </Link>
           <div className={styles.navigation}>
             <Link className={styles.button} to="/">

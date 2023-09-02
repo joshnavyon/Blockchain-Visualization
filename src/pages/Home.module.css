@@ -4,28 +4,28 @@
   position: relative;
 }
 .title {
-  font-size: inherit;
-  font-weight: 700;
+  font-size: var(--font-size-big3);
+  font-weight: 1000;
   font-family: inherit;
-  background: linear-gradient(#000, #000), #000;
+  background: #000000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .loremIpsumDolor {
   align-self: stretch;
-  font-size: var(--font-size-lgi-2);
+  font-size: var(--font-size-xl);
   text-align: center;
 }
 .titleParent {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 0 var(--padding-xs);
+  padding: 0 0 var(--padding-xl);
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
   gap: var(--gap-xl);
-  max-width: 900px;
+  max-width: 950px;
 }
 .image1Icon {
   max-width: 100%;
@@ -47,7 +47,7 @@
   border: 0;
   font-family: var(--text-xs-semibold);
   font-size: var(--font-size-xl);
-  background-color: transparent;
+  background-color: var(--color-lavender);
   align-self: stretch;
   flex: 1;
 }
@@ -60,7 +60,7 @@
 .frameParent {
   align-self: stretch;
   border-radius: 0 0 var(--br-s) var(--br-s);
-  background-color: var(--sxx-light);
+  background-color: var(--color-lavender);
   flex-direction: row;
   padding: var(--padding-xs) var(--padding-xl);
   gap: var(--gap-6xl);
@@ -68,7 +68,7 @@
 .image1Parent {
   width: 100%;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 800px;
 }
 .mid,
 .ourTeamWrapper {
@@ -85,7 +85,7 @@
   padding: 0 0 var(--padding-xs);
   box-sizing: border-box;
   justify-content: center;
-  max-width: 900px;
+  max-width: 800px;
 }
 .whatsappImage20230826At1 {
   align-self: stretch;
@@ -104,7 +104,7 @@
   line-height: 160%;
 }
 .tukangCabul {
-  font-size: var(--text-md-semibold-size);
+  font-size: var(--font-size-mid);
   opacity: 0.5;
 }
 .darrellDevlinParent {
@@ -113,7 +113,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  gap: var(--gap-8xs);
 }
 .degreeComputerScience {
   margin: 0;
@@ -132,7 +132,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xl);
+  gap: var(--gap-6xl);
 }
 .frameGroup {
   align-self: stretch;
@@ -140,23 +140,26 @@
 }
 .cardwhitewithPhoto {
   flex: 1;
+
+  min-width: 300px;
   border-radius: var(--br-s);
   background-color: var(--base-white);
   box-shadow: var(--basic-shadow);
   border: 2px solid var(--outline);
   box-sizing: border-box;
-  height: 522px;
+  height: 600px;
   overflow: hidden;
 }
 .cardwhitewithPhotoParent {
   align-self: stretch;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   padding: 0 var(--padding-5xl);
   align-items: center;
   justify-content: center;
-  gap: var(--gap-5xl);
-  font-size: var(--font-size-13xl);
+  gap: var(--gap-6xl);
+  font-size: var(--font-size-big2);
   font-family: var(--font-open-sans);
 }
 .footer,
@@ -167,10 +170,11 @@
 }
 .footer {
   align-self: stretch;
-  height: 709px;
+  height: 100%;
+  margin-bottom: 100px;
   align-items: center;
   gap: var(--gap-3xs);
-  color: var(--color-darkslategray-100);
+  color: var(--grey);
 }
 .home {
   position: relative;
@@ -181,7 +185,7 @@
   box-sizing: border-box;
   align-items: flex-start;
   text-align: left;
-  font-size: var(--font-size-28xl-7);
+  font-size: var(--font-size-big);
   color: var(--color-black);
   font-family: var(--text-xs-semibold);
 }

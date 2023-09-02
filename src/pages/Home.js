@@ -2,17 +2,19 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import styles from "./Home.module.css";
 const Home = () => {
+
+  
   return (
     <div className={styles.home}>
       <Header />
       <div className={styles.mid}>
         <div className={styles.titleParent}>
-          <h1 className={styles.title}>Title</h1>
+          <h1 className={styles.title}>Welcome!</h1>
           <p className={styles.loremIpsumDolor}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+              Step into the captivating world of blockchain technology with our cutting-edge visualization tool. 
+              Our home page is your gateway to exploring the intricate web of transactions and digital assets that
+              power the decentralized future. Immerse yourself in an interactive journey that transforms complex data into visually stunning insights, 
+              making the blockchain's transparent and secure nature come alive.
           </p>
         </div>
         <div className={styles.image1Parent}>
@@ -43,7 +45,7 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Darrell Devlin</b>
-                <div className={styles.tukangCabul}>Tukang Cabul</div>
+                <div className={styles.tukangCabul}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
                 <p className={styles.degreeComputerScience}>
@@ -86,15 +88,15 @@ const Home = () => {
             <img
               className={styles.whatsappImage20230826At1}
               alt=""
-              src="/whatsapp-image-20230826-at-1150-1@2x.png"
+              src="/bo.jpeg"
             />
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Bryan Oscarina</b>
-                <div className={styles.tukangCabul}>Tukang Cabul2</div>
+                <div className={styles.tukangCabul}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
-                <p className={styles.degreeComputerScience}>{`Student ID: `}</p>
+                <p className={styles.degreeComputerScience}>{`Student ID: 103826047`}</p>
                 <p className={styles.degreeComputerScience}>
                   Degree: Computer Science
                 </p>

@@ -1,0 +1,76 @@
+/* Container for the accordion */
+.accordion {
+  width: 100%;
+  font-size: var(--font-size-sml);
+}
+
+/* Style for each accordion section */
+.accordionSection {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Style for the accordion header */
+.accordionHeader {
+  background-color:   #efeefc ;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+
+  
+}
+
+/* Style for the active accordion header */
+.accordionHeader.active {
+
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Style for the accordion content */
+.accordionContent {
+  background-color: var(--color-lavender);
+}
+
+.chevronDownIcon {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.name1 {
+  position: relative;
+  font-weight: 500;
+}
+.nameGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-xl);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.frameParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+
+  padding: var(--padding-xs) 0;
+  gap: var(--gap-8xs);
+}

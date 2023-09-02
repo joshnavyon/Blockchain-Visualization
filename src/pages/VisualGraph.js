@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Statecollapsed from "../components/Statecollapsed";
+import Accordion from "../components/Accordion";
+
 import styles from "./VisualGraph.module.css";
 import D3Node from "./graph";
 const VisualGraph = () => {
+ 
   return (
     <div className={styles.visualGraph}>
       <Header />
@@ -36,20 +38,44 @@ const VisualGraph = () => {
                   <div className={styles.userNamesWallet}>10/20/2020</div>
                 </div>
                 <div className={styles.nameParent}>
-                  <div className={styles.userNamesWallet}>Details:</div>
-                  <div className={styles.userNamesWallet}>[details]</div>
+                  <div className={styles.userNamesWallet}>Amount:</div>
+                  <div className={styles.userNamesWallet}>0.0034 BTC</div>
                 </div>
                 <div className={styles.nameParent}>
-                  <div className={styles.userNamesWallet}>Details:</div>
-                  <div className={styles.userNamesWallet}>[details]</div>
+                  <div className={styles.userNamesWallet}>Currency:</div>
+                  <div className={styles.userNamesWallet}>Bitcoin</div>
                 </div>
               </div>
             </div>
+            <div className={styles.userNamesWallet}>Transactions</div>
             <div className={styles.userNamesWalletGroup}>
-              <div className={styles.userNamesWallet}>Transactions</div>
-              <Statecollapsed />
-              <Statecollapsed />
-              <Statecollapsed />
+              <Accordion
+                title="Transaction 1"
+                from="Cx0090033AC02"
+                to="Ax00100678BE3"
+                amount="0.00003"
+                date="02/12/2021"
+                time="09:10"
+                state={true}
+              />
+              <Accordion
+                title="Transaction 2"
+                from="Cx0090033AC02"
+                to="Ax00100678BE3"
+                amount="0.00003"
+                date="02/12/2021"
+                time="09:10"
+                state={false}
+              />
+              <Accordion
+                title="Transaction 3"
+                from="Cx0090033AC02"
+                to="Ax00100678BE3"
+                amount="0.00003"
+                date="02/12/2021"
+                time="09:10"
+                state={false}
+              />
             </div>
           </div>
           <div className={styles.buttonWrapper}>

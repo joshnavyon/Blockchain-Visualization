@@ -11,6 +11,8 @@ html, body {
   width: 194px;
   flex-shrink: 0;
 }
+
+
 .minimize01Icon {
   align-self: stretch;
   flex: 1;
@@ -29,7 +31,7 @@ html, body {
   cursor: pointer;
   border: 0;
   padding: 6px;
-  background-color: var(--color-mediumslateblue-100);
+  background-color: var(--color-light-purple);
   border-radius: 50px;
   width: 29px;
   height: 29px;
@@ -39,7 +41,7 @@ html, body {
 .ax00100678be3Parent {
   align-self: stretch;
   border-bottom: 2px solid var(--sx-dark);
-  padding: 0 0 var(--padding-xs) var(--padding-xs);
+  padding: 0 0 var(--padding-xl) 0;
   align-items: center;
   justify-content: space-between;
   min-height: 38px;
@@ -63,10 +65,10 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   gap: var(--gap-8xs);
-  font-size: 13.33px;
+  font-size: 13px;
 }
 .userNamesWalletParent {
-  gap: 21px;
+  gap:10px;
 }
 .frameContainer,
 .userNamesWalletGroup,
@@ -78,11 +80,12 @@ html, body {
   justify-content: flex-start;
 }
 .userNamesWalletGroup {
-  gap: var(--gap-3xs);
+  gap: var(--gap-10xs);
 }
 .frameContainer {
-  gap: 23px;
-  font-size: var(--text-md-semibold-size);
+  gap: 20px;
+  font-size: var(--font-size-mid);
+  padding: 0 var(--padding-xs) 0 var(--padding-xs) ;
 }
 .placeholderIcon {
   position: relative;
@@ -94,7 +97,7 @@ html, body {
 }
 .text {
   position: relative;
-  font-size: var(--text-md-semibold-size);
+  font-size: var(--font-size-sml);
   line-height: 24px;
   font-weight: 600;
   font-family: var(--text-xs-semibold);
@@ -105,14 +108,14 @@ html, body {
   cursor: pointer;
   border: 0;
   padding: var(--padding-xs) var(--padding-xl);
-  background-color: var(--color-mediumslateblue-100);
+  background-color: var(--color-light-purple);
   border-radius: var(--br-xs);
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  gap: var(--gap-3xs);
 }
 .buttonWrapper,
 .frameGroup {
@@ -129,14 +132,17 @@ html, body {
 .frameGroup {
   border-radius: var(--br-s);
   background-color: #fafafa;
-  width: 512px;
-  height: auto;
-  min-height: 900px;
+  flex: 1;
+  min-width: 500px;
+  max-width: 500px;
+  height: 100%;
+  min-height: 700px;
   padding: 15px;
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gap-5xs);
+  gap: var(--gap-3xs);
+
 }
 .frameIcon {
   position: relative;
@@ -151,7 +157,7 @@ html, body {
   top: 93px;
   left: 14.5px;
   border-radius: 50%;
-  background-color: var(--color-mediumslateblue-100);
+  background-color: var(--color-light-purple);
   width: 93px;
   height: 93px;
   z-index: 0;
@@ -162,20 +168,7 @@ html, body {
   line-height: 18px;
   font-weight: 600;
 }
-.content,
-.frame1 {
-  display: flex;
-  flex-direction: column;
-}
 
-
-.frame1 {
-  align-items: center;
-  width: 123px;
-  overflow: hidden;
-  justify-content: flex-end;
-  position: relative;
-}
 .frame,
 .frameIcon1 {
   overflow: hidden;
@@ -195,9 +188,14 @@ html, body {
   height: 397px;
 }
 .frameParent1 {
-  width: 100%;
+  flex: 1;
   height: 100%;
+  border: 2px solid var(--color-black);
+  max-width: 600px;
+  min-width: 500px;
 }
+
+
 .frameParent,
 .visualGraph {
   background-color: var(--base-white);
@@ -205,24 +203,27 @@ html, body {
   justify-content: flex-start;
 }
 .frameParent {
+  padding: var(--padding-2xl) 0 var(--padding-2xl) 0;
+  flex-wrap: wrap;
   align-self: stretch;
   flex-direction: row;
-  padding: 44px 0;
+  margin-bottom: 100px;
   align-items: center;
   gap: 74px;
   height: 100%;
+  justify-content: center;
 }
 .visualGraph {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  
   flex-direction: column;
   padding: 0 var(--padding-5xl);
   box-sizing: border-box;
   align-items: flex-start;
   text-align: left;
-  font-size: 23.04px;
+  font-size: 21px;
   color: var(--sx-dark);
   font-family: var(--text-xs-semibold);
 }

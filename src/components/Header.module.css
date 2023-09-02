@@ -28,13 +28,13 @@
 .logoWrap {
   align-self: stretch;
   align-items: flex-start;
-  gap: var(--gap-5xs);
+  gap: var(--gap-3xs);
 }
 .logo {
   cursor: pointer;
   text-decoration: none;
   align-items: center;
-  gap: var(--gap-3xs);
+  gap: var(--gap-10xs);
   color: inherit;
 }
 .placeholderIcon {
@@ -58,7 +58,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-5xs);
+  gap: var(--gap-3xs);
   color: inherit;
 }
 .navigation {
@@ -105,28 +105,31 @@
 }
 .frameParent {
   border-radius: var(--br-xs);
-  background-color: var(--sxx-light);
-  width: 316px;
+  background-color: var(--color-lavender);
+  width: 400px;
   padding: var(--padding-xs) var(--padding-xl);
   box-sizing: border-box;
   justify-content: center;
   gap: var(--gap-6xl);
+
+
 }
 .container {
   padding: 0 var(--padding-2xl);
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .header {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+ 
   padding: var(--padding-xl) 0;
   box-sizing: border-box;
-  align-items: flex-start;
-  justify-content: flex-start;
+ 
   text-align: left;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-mid);
   color: var(--color-black);
   font-family: var(--text-xs-semibold);
 }
+
