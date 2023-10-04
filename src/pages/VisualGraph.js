@@ -5,7 +5,40 @@ import Accordion from "../components/Accordion";
 import styles from "./VisualGraph.module.css";
 import D3Node from "./graph";
 const VisualGraph = () => {
- 
+  const nodes = [
+    {
+      id: "A",
+      from: "FElix",
+      size: 25,
+      transactionsIn: [],
+      transactionsOut: ["B", "C", "D", "E"],
+    },
+    {
+      id: "B",
+      size: 25,
+      transactionsIn: [],
+      transactionsOut: ["A", "C"],
+    },
+    {
+      id: "C",
+      size: 25,
+      transactionsIn: [],
+      transactionsOut: ["C", "D", "E"],
+    },
+    {
+      id: "D",
+      size: 25,
+      transactionsIn: [],
+      transactionsOut: ["D"],
+    },
+    {
+      id: "E",
+      size: 25,
+      transactionsIn: [],
+      transactionsOut: ["A", "B"],
+    },
+  ];
+
   return (
     <div className={styles.visualGraph}>
       <Header />
@@ -14,11 +47,7 @@ const VisualGraph = () => {
           <div className={styles.ax00100678be3Parent}>
             <p className={styles.ax00100678be3}>Ax00100678BE3</p>
             <button className={styles.minimize01Wrapper}>
-              <img
-                className={styles.minimize01Icon}
-                alt=""
-                src="/minimize01.svg"
-              />
+              <img className={styles.minimize01Icon} alt="" src="/minimize01.svg" />
             </button>
           </div>
           <div className={styles.frameContainer}>
@@ -50,8 +79,8 @@ const VisualGraph = () => {
             <div className={styles.userNamesWallet}>Transactions</div>
             <div className={styles.userNamesWalletGroup}>
               <Accordion
-                title="Transaction 1"
-                from="Cx0090033AC02"
+                title={nodes[0].id}
+                from={nodes[0].from}
                 to="Ax00100678BE3"
                 amount="0.00003"
                 date="02/12/2021"
@@ -80,17 +109,9 @@ const VisualGraph = () => {
           </div>
           <div className={styles.buttonWrapper}>
             <button className={styles.button}>
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder11.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder11.svg" />
               <div className={styles.text}>Make a payment</div>
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder11.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder11.svg" />
             </button>
           </div>
         </div>

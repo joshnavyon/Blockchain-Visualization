@@ -1,0 +1,86 @@
+{
+  "main": {
+    "id": "1",
+    "addressId": "0x1234567890123456789012345678901234567890",
+    "name": "Felix Joshua",
+    "type": "eoa",
+    "dateCreated": "1689228329",
+    "transactionsIn": [
+      {
+        "id": "2",
+        "hash": "0xf3a14bfddc65725b4a345e0bafa84afd328de1b9487339157a0f24c9085b66f2",
+        "value": "1000000000000000000",
+        "input": "0x",
+        "transaction": "78",
+        "gas": "21000",
+        "gas_used": "21000",
+        "gas_price": "11119629262",
+        "transaction_fee": "233512214502000",
+        "block_number": "15881178",
+        "block_hash": "0x1fa4a14c221824759e748d37a91988d6a50bdce5d47bc729b6b3de3dbc6d8fa0",
+        "block_timestamp": "1667378123"
+      },
+      {
+        "id": "3",
+        "hash": "0xf3a14bfddc65725b4a345e0bafa84afd328de1b9487339157a0f24c9085b66f2",
+        "value": "2000000000000000000",
+        "input": "0x",
+        "transaction": "79",
+        "gas": "22000",
+        "gas_used": "22000",
+        "gas_price": "11119629263",
+        "transaction_fee": "233512214502100",
+        "block_number": "15881179",
+        "block_hash": "0x1fa4a14c221824759e748d37a91988d6a50bdce5d47bc729b6b3de3dbc6d8fa0",
+        "block_timestamp": "1667378123"
+      }
+    ],
+    "transactionsOut": [
+      {
+        "id": "2",
+        "hash": "0xf3a14bfddc65725b4a345e0bafa84afd328de1b9487339157a0f24c9085b66f2",
+        "value": "1500000000000000000",
+        "input": "0x",
+        "transaction": "78",
+        "gas": "21000",
+        "gas_used": "21000",
+        "gas_price": "11119629262",
+        "transaction_fee": "233512214502000",
+        "block_number": "15881178",
+        "block_hash": "0x1fa4a14c221824759e748d37a91988d6a50bdce5d47bc729b6b3de3dbc6d8fa0",
+        "block_timestamp": "1667378123"
+      },
+      {
+        "id": "4",
+        "hash": "0xf3a14bfddc65725b4a345e0bafa84afd328de1b9487339157a0f24c9085b66f2",
+        "value": "2500000000000000000",
+        "input": "0x",
+        "transaction": "80",
+        "gas": "23000",
+        "gas_used": "23000",
+        "gas_price": "11119629264",
+        "transaction_fee": "233512214502200",
+        "block_number": "15881180",
+        "block_hash": "0x2fa4a14c221824759e748d37a91988d6a50bdce5d47bc729b6b3de3dbc6d8fa1",
+        "block_timestamp": "1667378124"
+      }
+    ]
+  },
+  "connected": [
+    {
+      "id": "2",
+      "addressId": "0x5432109876543210987654321098765432109876",
+      "name": "Alice Johnson"
+    },
+    {
+      "id": "3",
+      "addressId": "0x0123456789012345678901234567890123456789",
+      "name": "Bob Smith"
+    },
+    {
+      "id": "4",
+      "addressId": "0xfedcba0987654321098765432109876543210fed",
+      "name": "Eve Brown"
+    }
+  ]
+}
