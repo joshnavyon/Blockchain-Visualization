@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Button from "../components/Button";
 import styles from "./Home.module.css";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const [addressId, setAddressId] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    // Redirect to the wallet page with the provided addressId
+
+    navigate(`/wallet/${addressId}`);
+  };
+
   return (
     <div className={styles.home}>
       <Header />
@@ -22,17 +31,20 @@ const Home = () => {
           <img className={styles.image1Icon} alt="" src="/image-1@2x.png" />
           <div className={styles.frameParent}>
             <div className={styles.vectorWrapper}>
-              <img className={styles.vectorIcon} alt="" src="/vector1.svg" />
+              {/* <img className={styles.vectorIcon} alt="" src="/vector1.svg" /> */}
+              <button onClick={handleSearch}>Search</button>
             </div>
-            <input className={styles.frameChild} type="text" placeholder="Search wallet “Ax00..”" />
+            <input
+              className={styles.frameChild}
+              type="text"
+              placeholder="Search wallet “Ax00..”"
+              value={addressId}
+              onChange={(e) => setAddressId(e.target.value)}
+            />
           </div>
         </div>
       </div>
       <div className={styles.footer}>
-        <div>
-          <h1>Fetch Data Example</h1>
-          <Button /> {/* Render the Button component */}
-        </div>
         <div className={styles.ourTeamWrapper}>
           <h1 className={styles.title}>Our Team</h1>
         </div>

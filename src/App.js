@@ -2,6 +2,9 @@ import { Routes, Route, useNavigationType, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
 import VisualGraph from "./pages/VisualGraph";
 import { useEffect } from "react";
+import D3Node from "./components/D3LinkedNodes";
+import Wallet from "./components/Wallet";
+// import VisualGraph from "./pages/VisualGraph";
 
 function App() {
   const action = useNavigationType();
@@ -43,11 +46,9 @@ function App() {
 
   return (
     <Routes>
-
-        <Route path="/" element={<Home />} />
-        <Route path="/visual-graph" element={<VisualGraph />} />
-        <Route path="/wallet/:addressId" />
-
+      <Route path="/" element={<Home />} />
+      <Route path="/visual-graph" element={<VisualGraph />} />
+      <Route path="/wallet/:addressId" element={<VisualGraph />} />
     </Routes>
   );
 }

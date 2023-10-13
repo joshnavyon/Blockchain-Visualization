@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
-import { node } from "prop-types";
 
 function D3LinkedNodes({ nodes }) {
   const svgRef = useRef(null);
@@ -8,12 +7,10 @@ function D3LinkedNodes({ nodes }) {
   let containerHeight = null;
   let currentNode = null;
 
-  if (nodes) {
-    currentNode = nodes[0].id;
-  }
-  
   useEffect(() => {
     if (nodes) {
+      console.log(currentNode);
+      console.log("Masuk");
       if (svgRef.current) {
         containerWidth = svgRef.current.getBoundingClientRect().width;
         containerHeight = svgRef.current.getBoundingClientRect().height;
@@ -61,6 +58,8 @@ function D3LinkedNodes({ nodes }) {
         return links;
       }
 
+      // Define node data
+      // let currentNode = "1";
       const nodeSize = 25;
       // Define link data (connections between nodes)
 
@@ -145,7 +144,8 @@ function D3LinkedNodes({ nodes }) {
         }
 
         node.on("click", (event, d) => {
-          currentNode = d.id; // Update the currently selected node
+          // currentNode = d.id; // Update the currently selected node
+          currentNode = fetchWalletData(d.addressId);
 
           // Update the circle sizes based on the new currentNodeId
           node.attr("r", (nodeData) => (nodeData.id === currentNode ? nodeSize * 1.3 : nodeSize));
@@ -154,10 +154,9 @@ function D3LinkedNodes({ nodes }) {
           simulation.alpha(1).restart();
         });
       }
-
       redrawGraph(currentNode);
     }
-  }, [currentNode, nodes]);
+  }, [nodes, currentNode]);
 
   return (
     <>
