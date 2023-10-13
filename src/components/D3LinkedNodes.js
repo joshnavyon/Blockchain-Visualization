@@ -43,7 +43,8 @@ function D3LinkedNodes() {
       }
 
       // Extract transactionsOut from the current node
-      const transactionsOut = currentNodeObj.transactionsOut;
+      const transactionsOut = currentNodeObj.transactionsOut.map((node) => node.id);
+      console.log(transactionsOut);
 
       // Generate links based on transactionsOut
       const links = transactionsOut.map((targetNodeId) => ({
@@ -55,72 +56,77 @@ function D3LinkedNodes() {
     }
 
     // Define node data
+
     const nodes = [
       {
-        id: "A",
-        size: 25,
-        transactionsIn: [],
-        transactionsOut: ["B", "C", "D", "E"],
-      },
-      {
-        id: "B",
-        size: 25,
-        transactionsIn: [],
-        transactionsOut: ["A", "C"],
-      },
-      {
-        id: "C",
-        size: 25,
-        transactionsIn: [],
-        transactionsOut: ["C", "D", "E"],
-      },
-      {
-        id: "D",
-        size: 25,
-        transactionsIn: [],
-        transactionsOut: ["D"],
-      },
-      {
-        id: "E",
-        size: 25,
-        transactionsIn: [],
-        transactionsOut: ["A", "B"],
-      },
-    ];
-
-    nodes2 = {
-      main: {
-        id: null,
-        addressId: "0x58f56615180a8eea4c462235d9e215f72484b4a3",
-        name: null,
+        id: "1",
+        addressId: "0x8d08aad4b2bac2bb761ac4781cf62468c9ec47b4",
+        name: "Felix",
         type: "eoa",
-        dateCreated: null,
-        transactionsIn: [],
-        transactionsOut: [
+        dateCreated: "1682226334",
+        transactionsIn: [
           {
-            hash: "0xa1822e68a736bcdb57d05b2679260904813efdd17df62ede1d716dec9eeb4e8c",
-            value: "6947000000000000000000",
+            id: "4",
+            hash: "0xa43beda2d8739c679012b26b8b5f66dc4b7196eb31e39d6f7cdbede134e19720",
+            value: "20000000000000000000",
             input: null,
             transaction: null,
             gas: 21000,
             gas_used: 21000,
-            gas_price: 8459936485,
-            transaction_fee: 177658666185000,
-            block_number: 15878603,
-            block_timestamp: 1667347031,
+            gas_price: 11283747363,
+            transaction_fee: 236958694623000,
+            block_number: 15878986,
+            block_timestamp: 1667351687,
+          },
+        ],
+        transactionsOut: [
+          {
+            id: "2",
+            hash: "0xdd608c8c4e8d8529967955d89f9e71842e80c3c84d592c72054f68090a5a102c",
+            value: "9080186758793618211636",
+            input: null,
+            transaction: null,
+            gas: 21000,
+            gas_used: 21000,
+            gas_price: 12241050449,
+            transaction_fee: 257062059429000,
+            block_number: 15878752,
+            block_timestamp: 1667348843,
+          },
+          {
+            id: "3",
+            hash: "0x3ce66ee43f23b037aa64440f1e545c574ce779876aeefccf8b0905b74392215b",
+            value: "0",
+            input: null,
+            transaction: null,
+            gas: 1219186,
+            gas_used: 935469,
+            gas_price: 10580392185,
+            transaction_fee: 9897628896909765,
+            block_number: 15878617,
+            block_timestamp: 1667347211,
           },
         ],
       },
-      connected: [
-        {
-          addressId: "0x58f56615180a8eea4c462235d9e215f72484b4a3",
-          name: null,
-        },
-      ],
-    };
+      {
+        id: "4",
+        addressId: "0x58f56615180a8eea4c462235d9e215f72484b4a3",
+        name: "Darrell",
+      },
+      {
+        id: "2",
+        addressId: "0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd",
+        name: "Susanto",
+      },
+      {
+        id: "3",
+        addressId: "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+        name: "Haryanto",
+      },
+    ];
 
-    let currentNode = "A";
-
+    let currentNode = "1";
+    const nodeSize = 25;
     // Define link data (connections between nodes)
 
     function redrawGraph(currentNode) {
@@ -144,7 +150,7 @@ function D3LinkedNodes() {
         .selectAll("circle")
         .data(getUniqueFilteredNodes(currentNode, nodes, links))
         .join("circle")
-        .attr("r", (d) => (d.id === currentNode ? d.size * 1.2 : d.size))
+        .attr("r", (d) => (d.id === currentNode ? nodeSize * 1.2 : nodeSize))
         .attr("fill", (d) => (d.id === currentNode ? "blue" : "cyan"))
         .attr("cx", (d) => d.x)
         .attr("cy", (d) => d.y)
@@ -207,9 +213,7 @@ function D3LinkedNodes() {
         currentNode = d.id; // Update the currently selected node
 
         // Update the circle sizes based on the new currentNodeId
-        node.attr("r", (nodeData) =>
-          nodeData.id === currentNode ? nodeData.size * 1.3 : nodeData.size
-        );
+        node.attr("r", (nodeData) => (nodeData.id === currentNode ? nodeSize * 1.3 : nodeSize));
         redrawGraph(currentNode);
 
         simulation.alpha(1).restart();

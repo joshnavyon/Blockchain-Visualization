@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Accordion from "../components/Accordion";
 
 import styles from "./VisualGraph.module.css";
-import D3Node from "./graph";
+import D3Node from "../components/D3LinkedNodes";
 const VisualGraph = () => {
   const nodes = [
     {

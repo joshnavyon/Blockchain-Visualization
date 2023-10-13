@@ -1,9 +1,4 @@
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import VisualGraph from "./pages/VisualGraph";
 import { useEffect } from "react";
@@ -39,9 +34,7 @@ function App() {
     }
 
     if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
+      const metaDescriptionTag = document.querySelector('head > meta[name="description"]');
       if (metaDescriptionTag) {
         metaDescriptionTag.content = metaDescription;
       }
@@ -50,8 +43,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/visual-graph" element={<VisualGraph />} />
+
+        <Route path="/" element={<Home />} />
+        <Route path="/visual-graph" element={<VisualGraph />} />
+        <Route path="/wallet/:addressId" />
+
     </Routes>
   );
 }
