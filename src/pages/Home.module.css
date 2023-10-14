@@ -97,13 +97,13 @@
   object-fit: cover;
 }
 .darrellDevlin,
-.tukangCabul {
+.darrel {
   align-self: stretch;
   position: relative;
   letter-spacing: 0.14px;
   line-height: 160%;
 }
-.tukangCabul {
+.darrel {
   font-size: var(--font-size-mid);
   opacity: 0.5;
 }

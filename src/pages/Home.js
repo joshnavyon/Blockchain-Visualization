@@ -1,19 +1,9 @@
 import Header from "../components/Header";
 import styles from "./Home.module.css";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 
+
 const Home = () => {
-  const [addressId, setAddressId] = useState("");
-  const navigate = useNavigate();
-
-  const handleSearch = () => {
-    // Redirect to the wallet page with the provided addressId
-
-    navigate(`/wallet/${addressId}`);
-  };
-
   return (
     <div className={styles.home}>
       <Header />
@@ -26,6 +16,9 @@ const Home = () => {
             transactions and digital assets that power the decentralized future. Immerse yourself in
             an interactive journey that transforms complex data into visually stunning insights,
             making the blockchain's transparent and secure nature come alive.
+            <br />
+            <br />
+            Testing Purposes: 0x8d08aad4b2bac2bb761ac4781cf62468c9ec47b4
           </p>
         </div>
         <div className={styles.image1Parent}>
@@ -33,6 +26,7 @@ const Home = () => {
           <SearchBar />
         </div>
       </div>
+      <div></div>
       <div className={styles.footer}>
         <div className={styles.ourTeamWrapper}>
           <h1 className={styles.title}>Our Team</h1>
@@ -47,7 +41,7 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Darrell Devlin</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
                 <p className={styles.degreeComputerScience}>Student ID: 103850680</p>
@@ -65,7 +59,7 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Felix Joshua</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
                 <p className={styles.degreeComputerScience}>Student ID: 103827969</p>
@@ -79,7 +73,7 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Bryan Oscarina</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
                 <p className={styles.degreeComputerScience}>{`Student ID: 103826047`}</p>

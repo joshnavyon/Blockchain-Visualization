@@ -21,11 +21,6 @@ const Header = () => {
               <div className={styles.text}>Home</div>
               <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
             </Link>
-            <Link className={styles.button} to="/visual-graph">
-              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
-              <div className={styles.text}>Visual Graph</div>
-              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
-            </Link>
           </div>
         </div>
         <SearchBar />
