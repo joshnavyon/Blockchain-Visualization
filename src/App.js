@@ -2,8 +2,9 @@ import { Routes, Route, useNavigationType, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
 import VisualGraph from "./pages/VisualGraph";
 import { useEffect } from "react";
-import D3Node from "./components/D3LinkedNodes";
-import Wallet from "./components/Wallet";
+import Error505 from "./components/Error505";
+import Error404 from "./components/Error404";
+
 // import VisualGraph from "./pages/VisualGraph";
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/visual-graph" element={<VisualGraph />} />
       <Route path="/wallet/:addressId" element={<VisualGraph />} />
+      <Route path="/error505" element={<Error505 />} />
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 }

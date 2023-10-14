@@ -1,0 +1,35 @@
+.frameParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  border-radius: 0 0 var(--br-s) var(--br-s);
+  background-color: var(--color-lavender);
+  flex-direction: row;
+  padding: var(--padding-xs) var(--padding-xl);
+  gap: var(--gap-6xl);
+}
+
+.frameChild,
+.vectorWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.frameChild {
+  border: 0;
+  font-family: var(--text-xs-semibold);
+  font-size: var(--font-size-xl);
+  background-color: var(--color-lavender);
+  align-self: stretch;
+  flex: 1;
+}
+
+.vectorButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

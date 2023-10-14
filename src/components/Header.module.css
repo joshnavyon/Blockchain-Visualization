@@ -84,11 +84,8 @@
   background-color: transparent;
   flex: 1;
 }
-.vectorIcon {
-  position: relative;
-  width: 21px;
-  height: 21px;
-}
+
+
 .container,
 .frameParent,
 .vectorWrapper {
@@ -96,23 +93,10 @@
   flex-direction: row;
   align-items: center;
 }
-.vectorWrapper {
-  justify-content: flex-start;
-}
+
 .container,
 .frameParent {
   align-self: stretch;
-}
-.frameParent {
-  border-radius: var(--br-xs);
-  background-color: var(--color-lavender);
-  width: 400px;
-  padding: var(--padding-xs) var(--padding-xl);
-  box-sizing: border-box;
-  justify-content: center;
-  gap: var(--gap-6xl);
-
-
 }
 .container {
   padding: 0 var(--padding-2xl);

@@ -1,17 +1,43 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
-import { node } from "prop-types";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import styles from "./D3LinkedNodes.module.css";
 
-function D3LinkedNodes({ nodes }) {
+function D3LinkedNodes() {
   const svgRef = useRef(null);
   let containerWidth = null;
   let containerHeight = null;
   let currentNode = null;
 
+  const { addressId } = useParams();
+  const navigate = useNavigate();
+  const [nodes, setWalletData] = useState(null);
+
+  console.log(addressId);
+
+  function fetchWalletData(addressId) {
+    axios
+      .get(`http://127.0.0.1:8000/wallet/${addressId}`)
+      .then((response) => {
+        setWalletData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+
+        navigate("/error505");
+      });
+  }
+
+  useEffect(() => {
+    fetchWalletData(addressId);
+  }, []);
+
   if (nodes) {
     currentNode = nodes[0].id;
   }
-  
+
   useEffect(() => {
     if (nodes) {
       if (svgRef.current) {
@@ -28,14 +54,16 @@ function D3LinkedNodes({ nodes }) {
         const currentNodeObj = nodes.find((node) => node.id === currentNode);
         // Create an array of node IDs involved in transactions with the current node
         const connectedNodeIds = [
-          ...currentNodeObj.transactionsOut, // Add nodes connected through transactionsOut
+          ...currentNodeObj.transactionsOut.map((transaction) => transaction.id),
+          ...currentNodeObj.transactionsIn.map((transaction) => transaction.id),
           ...links.filter((link) => link.target === currentNode).map((link) => link.source), // Add nodes connected through incoming links
         ];
+
         const filteredNodes = [
           currentNodeObj,
           ...nodes.filter((node) => connectedNodeIds.includes(node.id)),
         ];
-        // Ensure unique nodes in the filteredNodes array
+
         return Array.from(new Set(filteredNodes));
       }
 
@@ -49,14 +77,17 @@ function D3LinkedNodes({ nodes }) {
         }
 
         // Extract transactionsOut from the current node
-        const transactionsOut = currentNodeObj.transactionsOut.map((node) => node.id);
-        console.log(transactionsOut);
 
-        // Generate links based on transactionsOut
-        const links = transactionsOut.map((targetNodeId) => ({
-          source: targetNodeId,
-          target: currentNode,
-        }));
+        const links = [
+          ...currentNodeObj.transactionsOut.map((node) => ({
+            source: currentNode,
+            target: node.id,
+          })),
+          ...currentNodeObj.transactionsIn.map((node) => ({
+            source: node.id,
+            target: currentNode,
+          })),
+        ];
 
         return links;
       }
@@ -68,6 +99,8 @@ function D3LinkedNodes({ nodes }) {
         svg.selectAll("*").remove();
 
         let links = [...getLinksForCurrentNode(currentNode, nodes)];
+        console.log(links);
+        console.log(getUniqueFilteredNodes(currentNode, nodes, links));
         // Create links
         const link = svg
           .append("g")
@@ -80,6 +113,8 @@ function D3LinkedNodes({ nodes }) {
 
         // Create nodes
         let node = svg
+          .attr("class", styles.pointer)
+          .append("g")
           .attr("stroke", "#fff")
           .attr("stroke-width", 1)
           .selectAll("circle")
@@ -99,6 +134,20 @@ function D3LinkedNodes({ nodes }) {
               .on("drag", dragged)
               .on("end", dragended)
           );
+
+        // Add text labels to nodes
+        let text = svg
+          .append("g")
+          .attr("class", "labels")
+          .selectAll("text")
+          .data(nodes)
+          .enter()
+          .append("text")
+          .attr("dx", -25)
+          .attr("dy", 50)
+          .text(function (d) {
+            return d.name;
+          });
 
         const simulation = d3
           .forceSimulation(nodes)
@@ -124,6 +173,10 @@ function D3LinkedNodes({ nodes }) {
             .attr("y2", (d) => d.target.y);
 
           node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+          text
+            .attr("x", (d) => d.x) // Adjust the x position of the text relative to the node
+            .attr("y", (d) => d.y);
         });
 
         // Define the dragstarted, dragged, and dragended functions
@@ -145,11 +198,12 @@ function D3LinkedNodes({ nodes }) {
         }
 
         node.on("click", (event, d) => {
-          currentNode = d.id; // Update the currently selected node
-
+          currentNode = fetchWalletData(d.addressId); // Update the currently selected node
+          navigate(`/wallet/${d.addressId}`);
+          setWalletData(null);
           // Update the circle sizes based on the new currentNodeId
           node.attr("r", (nodeData) => (nodeData.id === currentNode ? nodeSize * 1.3 : nodeSize));
-          redrawGraph(currentNode);
+          // redrawGraph(currentNode);
 
           simulation.alpha(1).restart();
         });
@@ -169,7 +223,7 @@ function D3LinkedNodes({ nodes }) {
           <p>Note: Play with the nodes!</p>
         </>
       ) : (
-        <h1>Loading...</h1>
+        <h1 className={styles.load}>Loading...</h1>
       )}
     </>
   );

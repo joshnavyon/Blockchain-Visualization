@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
+import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -8,11 +9,7 @@ const Header = () => {
           <Link className={styles.logo} to="/">
             <div className={styles.logoWrap}>
               <div className={styles.logomark}>
-                <img
-                  className={styles.contentIcon}
-                  alt=""
-                  src="/content2.svg"
-                />
+                <img className={styles.contentIcon} alt="" src="/content2.svg" />
               </div>
               <img className={styles.logotypeIcon} alt="" src="/logotype.svg" />
             </div>
@@ -20,43 +17,18 @@ const Header = () => {
           </Link>
           <div className={styles.navigation}>
             <Link className={styles.button} to="/">
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder2.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
               <div className={styles.text}>Home</div>
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder2.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
             </Link>
             <Link className={styles.button} to="/visual-graph">
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder2.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
               <div className={styles.text}>Visual Graph</div>
-              <img
-                className={styles.placeholderIcon}
-                alt=""
-                src="/placeholder2.svg"
-              />
+              <img className={styles.placeholderIcon} alt="" src="/placeholder2.svg" />
             </Link>
           </div>
         </div>
-        <div className={styles.frameParent}>
-          <input
-            className={styles.frameChild}
-            type="text"
-            placeholder="Search wallet “Ax00..”"
-          />
-          <div className={styles.vectorWrapper}>
-            <img className={styles.vectorIcon} alt="" src="/vector.svg" />
-          </div>
-        </div>
+        <SearchBar />
       </div>
     </header>
   );
