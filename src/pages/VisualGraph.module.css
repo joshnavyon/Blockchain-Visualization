@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100vh;
 }
 
@@ -8,10 +9,10 @@ html, body {
   line-height: 24px;
   font-weight: 700;
   display: inline-block;
-  width: 194px;
+  width: 400px;
   flex-shrink: 0;
+  word-wrap: break-word;
 }
-
 
 .minimize01Icon {
   align-self: stretch;
@@ -68,7 +69,7 @@ html, body {
   font-size: 13px;
 }
 .userNamesWalletParent {
-  gap:10px;
+  gap: 10px;
 }
 .frameContainer,
 .userNamesWalletGroup,
@@ -85,7 +86,7 @@ html, body {
 .frameContainer {
   gap: 20px;
   font-size: var(--font-size-mid);
-  padding: 0 var(--padding-xs) 0 var(--padding-xs) ;
+  padding: 0 var(--padding-xs) 0 var(--padding-xs);
 }
 .placeholderIcon {
   position: relative;
@@ -135,14 +136,13 @@ html, body {
   flex: 1;
   min-width: 500px;
   max-width: 500px;
-  height: 100%;
+  height: auto;
   min-height: 700px;
   padding: 15px;
   box-sizing: border-box;
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--gap-3xs);
-
 }
 .frameIcon {
   position: relative;
@@ -195,7 +195,6 @@ html, body {
   min-width: 500px;
 }
 
-
 .frameParent,
 .visualGraph {
   background-color: var(--base-white);
@@ -217,7 +216,7 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  
+
   flex-direction: column;
   padding: 0 var(--padding-5xl);
   box-sizing: border-box;

@@ -1,38 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
-import { useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./D3LinkedNodes.module.css";
+import axios from "axios";
 
-function D3LinkedNodes() {
+function D3LinkedNodes({ data, func }) {
   const svgRef = useRef(null);
   let containerWidth = null;
   let containerHeight = null;
   let currentNode = null;
-
-  const { addressId } = useParams();
   const navigate = useNavigate();
-  const [nodes, setWalletData] = useState(null);
-
-  console.log(addressId);
-
-  function fetchWalletData(addressId) {
-    axios
-      .get(`http://127.0.0.1:8000/wallet/${addressId}`)
-      .then((response) => {
-        setWalletData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-
-        navigate("/error505");
-      });
-  }
+  const [nodes, setWalletData] = useState(data);
 
   useEffect(() => {
-    fetchWalletData(addressId);
-  }, []);
+    setWalletData(data);
+  }, [data]);
+
 
   if (nodes) {
     currentNode = nodes[0].id;
@@ -198,7 +181,8 @@ function D3LinkedNodes() {
         }
 
         node.on("click", (event, d) => {
-          currentNode = fetchWalletData(d.addressId); // Update the currently selected node
+          func(d.addressId);
+          
           navigate(`/wallet/${d.addressId}`);
           setWalletData(null);
           // Update the circle sizes based on the new currentNodeId
