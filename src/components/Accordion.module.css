@@ -10,12 +10,11 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Style for the accordion header */
 .accordionHeader {
-  background-color:   #efeefc ;
+  background-color: #efeefc;
   padding: 5px;
   cursor: pointer;
   user-select: none;
@@ -25,14 +24,10 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-
-
-  
 }
 
 /* Style for the active accordion header */
 .accordionHeader.active {
-
   align-self: stretch;
   display: flex;
   flex-direction: row;
@@ -52,9 +47,23 @@
   flex-shrink: 0;
 }
 
-.name1 {
+.name1,
+.name2 {
   position: relative;
   font-weight: 500;
+}
+
+.name2 {
+  max-width: 250px;
+  height: auto;
+  word-wrap: break-word;
+  overflow: auto;
+  max-width: 250px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  text-overflow: ellipsis;
+  display: -webkit-box;
 }
 .nameGroup {
   align-self: stretch;

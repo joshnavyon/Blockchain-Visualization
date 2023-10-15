@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import styles from "./Home.module.css";
-const Home = () => {
+import SearchBar from "../components/SearchBar";
 
-  
+
+const Home = () => {
   return (
     <div className={styles.home}>
       <Header />
@@ -11,26 +11,22 @@ const Home = () => {
         <div className={styles.titleParent}>
           <h1 className={styles.title}>Welcome!</h1>
           <p className={styles.loremIpsumDolor}>
-              Step into the captivating world of blockchain technology with our cutting-edge visualization tool. 
-              Our home page is your gateway to exploring the intricate web of transactions and digital assets that
-              power the decentralized future. Immerse yourself in an interactive journey that transforms complex data into visually stunning insights, 
-              making the blockchain's transparent and secure nature come alive.
+            Step into the captivating world of blockchain technology with our cutting-edge
+            visualization tool. Our home page is your gateway to exploring the intricate web of
+            transactions and digital assets that power the decentralized future. Immerse yourself in
+            an interactive journey that transforms complex data into visually stunning insights,
+            making the blockchain's transparent and secure nature come alive.
+            <br />
+            <br />
+            Testing Purposes: 0x8d08aad4b2bac2bb761ac4781cf62468c9ec47b4
           </p>
         </div>
         <div className={styles.image1Parent}>
           <img className={styles.image1Icon} alt="" src="/image-1@2x.png" />
-          <div className={styles.frameParent}>
-            <div className={styles.vectorWrapper}>
-              <img className={styles.vectorIcon} alt="" src="/vector1.svg" />
-            </div>
-            <input
-              className={styles.frameChild}
-              type="text"
-              placeholder="Search wallet “Ax00..”"
-            />
-          </div>
+          <SearchBar />
         </div>
       </div>
+      <div></div>
       <div className={styles.footer}>
         <div className={styles.ourTeamWrapper}>
           <h1 className={styles.title}>Our Team</h1>
@@ -45,18 +41,12 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Darrell Devlin</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
-                <p className={styles.degreeComputerScience}>
-                  Student ID: 103850680
-                </p>
-                <p className={styles.degreeComputerScience}>
-                  Degree: Computer Science
-                </p>
-                <p className={styles.degreeComputerScience}>
-                  Major: Data Science
-                </p>
+                <p className={styles.degreeComputerScience}>Student ID: 103850680</p>
+                <p className={styles.degreeComputerScience}>Degree: Computer Science</p>
+                <p className={styles.degreeComputerScience}>Major: Data Science</p>
               </div>
             </div>
           </div>
@@ -69,40 +59,26 @@ const Home = () => {
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Felix Joshua</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
-                <p className={styles.degreeComputerScience}>
-                  Student ID: 103827969
-                </p>
-                <p className={styles.degreeComputerScience}>
-                  Degree: Computer Science
-                </p>
-                <p className={styles.degreeComputerScience}>
-                  Major: Software Developer
-                </p>
+                <p className={styles.degreeComputerScience}>Student ID: 103827969</p>
+                <p className={styles.degreeComputerScience}>Degree: Computer Science</p>
+                <p className={styles.degreeComputerScience}>Major: Software Developer</p>
               </div>
             </div>
           </div>
           <div className={styles.cardwhitewithPhoto}>
-            <img
-              className={styles.whatsappImage20230826At1}
-              alt=""
-              src="/bo.jpeg"
-            />
+            <img className={styles.whatsappImage20230826At1} alt="" src="/bo.jpeg" />
             <div className={styles.frameGroup}>
               <div className={styles.darrellDevlinParent}>
                 <b className={styles.darrellDevlin}>Bryan Oscarina</b>
-                <div className={styles.tukangCabul}>Student</div>
+                <div className={styles.darrel}>Student</div>
               </div>
               <div className={styles.studentId103850680Container}>
                 <p className={styles.degreeComputerScience}>{`Student ID: 103826047`}</p>
-                <p className={styles.degreeComputerScience}>
-                  Degree: Computer Science
-                </p>
-                <p className={styles.degreeComputerScience}>
-                  Major: Cybersecurity
-                </p>
+                <p className={styles.degreeComputerScience}>Degree: Computer Science</p>
+                <p className={styles.degreeComputerScience}>Major: Cybersecurity</p>
               </div>
             </div>
           </div>
